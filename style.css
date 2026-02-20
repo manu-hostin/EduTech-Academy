@@ -1,0 +1,195 @@
+@import url(https://fonts.google.com/share?selection.family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900);
+@import url(https://fonts.google.com/share?selection.family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900|Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900);
+
+:root { /* Não esquecer de chamar o var() */
+    --fonte-titulos: 'Poppins', sans-serif;
+    --fonte-textos: 'Inter', sans-serif;
+
+    --cor-fundo-claro: #f9f9f9;
+    --texto-padrao-claro: #1E1E1E;
+    --azul-botoes-claro: #0077CC;
+    --fundo-caixa-claro: #FFFFFF;
+    --hover-links-claro: #005FA3;
+    --divisores-claro: #444444;
+
+    --cor-fundo-escuro: #1E1E1E;
+    --texto-padrao-escuro: #F9F9F9;
+    --azul-botoes-escuro: #4DA6FF;
+    --fundo-caixa-escuro: #2C2C2C;
+    --hover-links-escuro: #66BFFF;
+    --divisores-escuro: #E0E0E0;
+}
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: var(--fonte-textos);
+    background-color: var(--cor-fundo-claro);
+}
+.linha-divisora {
+    background-color: var(--divisores-escuro);
+    height: 1px;
+    margin: 10px 0;
+}
+h1 {
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+
+header {
+    padding: 0 10px;
+}
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--azul-botoes-claro);
+}
+#menu-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+nav a {
+    text-decoration: none;
+    color: var(--texto-padrao-claro);
+    gap: 15px;
+}
+nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#secao-principal {
+  text-align: center;
+}
+#secao-principal p {
+    font-size: 1.2rem;
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--divisores-claro);
+}
+
+
+#nossos-cursos {
+    padding-left: 2rem;
+}
+.curso > img:first-of-type {
+    width: 100%;
+    max-width: 450px;
+    display: block;
+}
+#cursos-apresentacao {
+    display: grid;
+    grid-template-columns: 0.05fr 1fr 1fr 1fr 1fr 0.05fr; /* Não adicionei o areas, se der erro, colocar*/
+    grid-template-areas: ". dev data marketing design .";
+}
+.dev {
+    grid-area: dev;
+}
+.data {
+    grid-area: data;
+}
+.marketing {
+    grid-area: marketing;
+}
+.design {
+    grid-area: design;
+}
+
+.curso {
+    border: 1px solid var(--divisores-escuro);
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.curso h4, .carga-horaria-curso, .forma-curso, .ver-detalhes {
+    padding: 0 20px 0 20px;
+}
+.curso h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 20px;
+}
+.curso p {
+    font-size: 0.8rem;
+    color: var(--divisores-claro);
+    margin: 0;
+}
+.curso p, img {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.ver-detalhes {
+    padding: 0.7rem 9rem;
+    background-color: var(--azul-botoes-claro);
+    margin: 1.3rem auto;
+    display: flex;
+    border-radius: 5px;
+    color: var(--cor-fundo-claro);
+    border: 0;
+}
+.forma-curso img, .carga-horaria-curso img {
+    max-width: 20px;
+}
+
+#matricula {
+    padding: 5px 2rem;
+}
+#formulario-completo {
+    border: 1px solid var(--divisores-escuro);
+    border-radius: 5px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "matricula . . ."
+                         "nome email areas-conhecimento areas-conhecimento"
+                         "telefone cpf areas-conhecimento areas-conhecimento"
+                         "curso curso areas-conhecimento areas-conhecimento "
+                         "cep rua . . "
+                         "bairro cidade . . "
+                         "estado estado . .";
+    gap:1rem;
+}
+#matricula {
+    grid-area: matricula;
+}
+#nome {
+    grid-area: nome;
+}
+#email {
+    grid-area: email;
+}
+#telefone {
+    grid-area: telefone;
+}
+#cpf {
+    grid-area: cpf;
+}
+#cursos {
+    grid-area: curso;
+}
+#cep {
+    grid-area: cep;
+}
+#rua {
+    grid-area: rua;
+}
+#bairro {
+    grid-area: bairro;
+}
+#cidade {
+    grid-area: cidade;
+}
+#estado {
+    grid-area: estado;
+}
+#areas-conhecimento {
+    grid-area: areas-conhecimento;
+}
