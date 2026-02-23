@@ -49,7 +49,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    padding: 0 25px;
 }
 nav a {
     text-decoration: none;
@@ -73,6 +73,198 @@ nav {
 }
 
 
-.curso img {
-    max-width: 20rem;
+#nossos-cursos {
+    padding-left: 2rem;
+}
+.curso > img:first-of-type {
+    width: 100%;
+    max-width: 450px;
+    display: block;
+}
+#cursos-apresentacao {
+    display: grid;
+    grid-template-columns: 0.05fr 1fr 1fr 1fr 1fr 0.05fr; /* Não adicionei o areas, se der erro, colocar*/
+    grid-template-areas: ". dev data marketing design .";
+}
+.dev {
+    grid-area: dev;
+}
+.data {
+    grid-area: data;
+}
+.marketing {
+    grid-area: marketing;
+}
+.design {
+    grid-area: design;
+}
+
+.curso {
+    border: 1px solid var(--divisores-escuro);
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.curso h4, .carga-horaria-curso, .forma-curso, .ver-detalhes {
+    padding: 0 20px 0 20px;
+}
+.curso h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 20px;
+}
+.curso p {
+    font-size: 0.8rem;
+    color: var(--divisores-claro);
+    margin: 0;
+}
+.curso p, img {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.ver-detalhes {
+    padding: 0.7rem 8rem;
+    background-color: var(--azul-botoes-claro);
+    margin: 1.3rem auto;
+    display: flex;
+    border-radius: 5px;
+    color: var(--cor-fundo-claro);
+    border: 0;
+}
+.forma-curso img, .carga-horaria-curso img {
+    max-width: 20px;
+}
+
+#matricula {
+    padding: 5px 2rem;
+}
+/* #formulario-completo {
+    border: 1px solid var(--divisores-escuro);
+    border-radius: 5px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "matricula . . ."
+                         "nome email areas-conhecimento areas-conhecimento"
+                         "telefone cpf areas-conhecimento areas-conhecimento"
+                         "curso curso areas-conhecimento areas-conhecimento "
+                         "cep rua . . "
+                         "bairro cidade . . "
+                         "estado estado . .";
+    gap:1rem;
+}
+#matricula {
+    grid-area: matricula;
+}
+#nome {
+    grid-area: nome;
+}
+#email {
+    grid-area: email;
+}
+#telefone {
+    grid-area: telefone;
+}
+#cpf {
+    grid-area: cpf;
+}
+#cursos {
+    grid-area: curso;
+}
+#cep {
+    grid-area: cep;
+}
+#rua {
+    grid-area: rua;
+}
+#bairro {
+    grid-area: bairro;
+}
+#cidade {
+    grid-area: cidade;
+}
+#estado {
+    grid-area: estado;
+}
+#areas-conhecimento {
+    grid-area: areas-conhecimento;
+} */
+
+#formulario {
+    width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* duas colunas */
+    gap: 20px 30px; /* espaço vertical e horizontal */
+}
+
+#formulario label {
+    font-weight: 600;
+    font-size: 14px;
+    grid-column: span 2; 
+}
+
+#formulario input,
+#formulario select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Curso ocupa a linha inteira */
+#formulario select {
+    grid-column: span 2;
+}
+
+/* Botão ocupa linha inteira */
+#formulario button {
+    padding: 10px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#formulario-completo h4 {
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+#formulario-completo {
+    margin: 2rem;
+    width: 750px;
+    border: 1px solid var(--divisores-escuro);
+    padding: 15px;
+}
+
+#secao-matricula {
+    display: flex;
+    gap: 20rem;
+}
+#areas-conhecimento {
+    padding: 5px 16rem 0 15px;
+    text-decoration: none;
+    margin-left: 0;
+    margin-right: 2rem;
+    border: 1px solid var(--divisores-escuro);
+    height: 23rem;
+}
+#areas-conhecimento h4 {
+    padding-bottom: 0;
+}
+li, ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+}
+
+
+.dark {
+    background-color: var(--cor-fundo-escuro);
+    color: var(--azul-botoes-escuro);
 }
